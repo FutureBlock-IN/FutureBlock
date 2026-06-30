@@ -1,0 +1,95 @@
+<svg width="350" height="380" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Glowing Background -->
+  <defs>
+    <radialGradient id="redGlow" cx="50%" cy="50%" r="90%">
+      <stop offset="0%" style="stop-color:#ff4444;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="200" cy="150" r="120" fill="url(#redGlow)"/>
+
+  <!-- Main Cloud -->
+  <path d="M100 150 C60 150 50 120 70 100 C70 70 100 60 120 70 C130 40 170 40 190 70 C220 50 260 60 270 90 C300 80 330 100 330 130 C350 140 350 170 330 180 C330 190 320 200 300 200 L100 200 C80 200 60 180 70 160 C60 150 70 150 100 150" 
+        fill="none" 
+        stroke="#ff4444" 
+        stroke-width="3">
+    <animate attributeName="stroke-opacity" 
+             values="1;0.5;1" 
+             dur="3s" 
+             repeatCount="indefinite"/>
+  </path>
+  
+  <!-- Circuit Pattern -->
+  <path d="M120 120 H280 M120 180 H280" 
+        stroke="#ff4444" 
+        stroke-width="1.5" 
+        stroke-dasharray="5,5" 
+        opacity="0.6"/>
+  
+  <!-- Data Flow Lines -->
+  <path d="M140 140 V180 H260 V140" 
+        fill="none" 
+        stroke="#ff4444" 
+        stroke-width="2" 
+        opacity="0.8"/>
+  
+  <!-- Data Points -->
+  <g>
+    <circle cx="140" cy="140" r="4" fill="#ff4444">
+      <animate attributeName="opacity" 
+               values="1;0.3;1" 
+               dur="1.5s" 
+               repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="140" r="4" fill="#ff4444">
+      <animate attributeName="opacity" 
+               values="1;0.3;1" 
+               dur="1.5s" 
+               repeatCount="indefinite" 
+               begin="0.5s"/>
+    </circle>
+    <circle cx="260" cy="140" r="4" fill="#ff4444">
+      <animate attributeName="opacity" 
+               values="1;0.3;1" 
+               dur="1.5s" 
+               repeatCount="indefinite" 
+               begin="1s"/>
+    </circle>
+  </g>
+
+  <!-- Data Flow Arrows -->
+  <g fill="none" stroke="#ff4444" stroke-width="2">
+    <path d="M170 140 L180 135 L190 140">
+      <animate attributeName="opacity" 
+               values="1;0.3;1" 
+               dur="2s" 
+               repeatCount="indefinite"/>
+    </path>
+    <path d="M230 140 L240 135 L250 140">
+      <animate attributeName="opacity" 
+               values="1;0.3;1" 
+               dur="2s" 
+               repeatCount="indefinite" 
+               begin="1s"/>
+    </path>
+  </g>
+
+  <!-- Connection Points -->
+  <g fill="#ff4444">
+    <circle cx="140" cy="180" r="3"/>
+    <circle cx="200" cy="180" r="3"/>
+    <circle cx="260" cy="180" r="3"/>
+  </g>
+  
+  <!-- Digital Pulses -->
+  <path d="M160 160 h20 v-10 h20 v10 h20" 
+        fill="none" 
+        stroke="#ff4444" 
+        stroke-width="1.5" 
+        opacity="0.6">
+    <animate attributeName="stroke-opacity" 
+             values="0.6;0.3;0.6" 
+             dur="2s" 
+             repeatCount="indefinite"/>
+  </path>
+</svg>

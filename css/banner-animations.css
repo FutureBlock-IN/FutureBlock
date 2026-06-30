@@ -1,0 +1,590 @@
+/* Common Banner Styles */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    padding: 2rem;
+  }
+  
+  .hero-text {
+    flex: 1;
+    padding-right: 2rem;
+  }
+  
+  .hero-image {
+    flex: 1;
+    position: relative;
+  }
+  
+  .animated-text {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  
+  .animated-text .line {
+    display: block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+  }
+  
+  .animated-text .line:nth-child(1) { animation-delay: 0.2s; }
+  .animated-text .line:nth-child(2) { animation-delay: 0.4s; }
+  .animated-text .line:nth-child(3) { animation-delay: 0.6s; }
+  
+  .animated-text .highlight {
+    color: #ff0000;
+    font-size: 4rem;
+  }
+  
+  .subtitle {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    max-width: 600px;
+  }
+  
+  /* Animation Keyframes */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Tech Sphere Animation (Automation) */
+  .tech-sphere {
+    position: relative;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .sphere-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .sphere {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .sphere-ring {
+    position: absolute;
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    border-radius: 50%;
+    animation: rotate 10s linear infinite;
+  }
+  
+  .sphere-ring:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    animation-delay: 0s;
+  }
+  
+  .sphere-ring:nth-child(2) {
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    animation-delay: -2s;
+  }
+  
+  .sphere-ring:nth-child(3) {
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    animation-delay: -4s;
+  }
+  
+  .sphere-core {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 30%;
+    left: 30%;
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  /* Shield Animation (Cybersecurity) */
+  .shield-animation {
+    position: relative;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .shield-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .shield {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .shield-layer {
+    position: absolute;
+    border: 2px solid rgba(0, 255, 0, 0.3);
+    border-radius: 50%;
+    animation: shieldPulse 3s ease-in-out infinite;
+  }
+  
+  .shield-layer:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    animation-delay: 0s;
+  }
+  
+  .shield-layer:nth-child(2) {
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    animation-delay: -1s;
+  }
+  
+  .shield-core {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 30%;
+    left: 30%;
+    background: rgba(0, 255, 0, 0.2);
+    border-radius: 50%;
+    animation: shieldGlow 2s ease-in-out infinite;
+  }
+  
+  /* Team Animation (GuruSquad) */
+  .team-animation {
+    position: relative;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .team-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .team-circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .team-member {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 115, 255, 0.2);
+    border-radius: 50%;
+    animation: teamRotate 10s linear infinite;
+  }
+  
+  .team-member:nth-child(1) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .team-member:nth-child(2) {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  
+  .team-member:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .team-core {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 132, 255, 0.3);
+    border-radius: 50%;
+    animation: teamPulse 2s ease-in-out infinite;
+  }
+  
+  /* Innovation Animation */
+  .innovation-animation {
+    position: relative;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .innovation-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .innovation-sphere {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .innovation-ring {
+    position: absolute;
+    border: 2px solid rgba(255, 166, 0, 0.424);
+    border-radius: 50%;
+    animation: innovateRotate 8s linear infinite;
+  }
+  
+  .innovation-ring:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    animation-delay: 0s;
+  }
+  
+  .innovation-ring:nth-child(2) {
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    animation-delay: -2s;
+  }
+  
+  .innovation-ring:nth-child(3) {
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    animation-delay: -4s;
+  }
+  
+  .innovation-core {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 30%;
+    left: 30%;
+    background: rgba(255, 165, 0, 0.2);
+    border-radius: 50%;
+    animation: innovatePulse 2s ease-in-out infinite;
+  }
+  
+  /* Modernization Animation */
+  .modernization-animation {
+    position: relative;
+    width: 400px;
+    height: 400px;
+  }
+  
+  .modernization-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .modernization-sphere {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .modernization-ring {
+    position: absolute;
+    border: 2px solid rgba(0, 191, 255, 0.3);
+    border-radius: 50%;
+    animation: modernizeRotate 12s linear infinite;
+  }
+  
+  .modernization-ring:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    animation-delay: 0s;
+  }
+  
+  .modernization-ring:nth-child(2) {
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    animation-delay: -3s;
+  }
+  
+  .modernization-ring:nth-child(3) {
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    animation-delay: -6s;
+  }
+  
+  .modernization-core {
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    top: 30%;
+    left: 30%;
+    background: rgba(0, 191, 255, 0.2);
+    border-radius: 50%;
+    animation: modernizePulse 2s ease-in-out infinite;
+  }
+  
+  /* Floating Elements */
+  .floating-elements .element,
+  .security-elements .element,
+  .connection-elements .element,
+  .spark-elements .element,
+  .upgrade-elements .element {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  /* Animation Keyframes */
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 0.5; }
+  }
+  
+  @keyframes shieldPulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 0.3; }
+  }
+  
+  @keyframes shieldGlow {
+    0% { box-shadow: 0 0 10px rgba(0, 255, 0, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); }
+    100% { box-shadow: 0 0 10px rgba(0, 255, 0, 0.3); }
+  }
+  
+  @keyframes teamRotate {
+    from { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+  }
+  
+  @keyframes teamPulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 0.3; }
+  }
+  
+  @keyframes innovateRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes innovatePulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 0.3; }
+  }
+  
+  @keyframes modernizeRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes modernizePulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 0.3; }
+  }
+  
+  @keyframes float {
+    0% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-20px) translateX(10px); }
+    100% { transform: translateY(0) translateX(0); }
+  }
+  
+  /* Automation Animation */
+  .automation-animation {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    perspective: 1000px;
+  }
+  
+  .automation-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    animation: rotate3D 20s linear infinite;
+  }
+  
+  .automation-gear {
+    position: absolute;
+    border: 2px solid rgba(255, 0, 0, 0.3);
+    border-radius: 50%;
+    animation: gearRotate 10s linear infinite;
+  }
+  
+  .automation-gear:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    border-width: 4px;
+    animation-delay: 0s;
+  }
+  
+  .automation-gear:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    top: 25px;
+    left: 25px;
+    border-width: 3px;
+    animation-delay: -2s;
+    animation-direction: reverse;
+  }
+  
+  .automation-gear:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    top: 50px;
+    left: 50px;
+    border-width: 2px;
+    animation-delay: -4s;
+  }
+  
+  .automation-core {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 70px;
+    left: 70px;
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  .automation-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .automation-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: rgba(255, 0, 0, 0.5);
+    border-radius: 50%;
+    animation: particleFloat 3s ease-in-out infinite;
+  }
+  
+  .automation-particle:nth-child(1) { top: 20%; left: 20%; animation-delay: 0s; }
+  .automation-particle:nth-child(2) { top: 60%; left: 80%; animation-delay: -1s; }
+  .automation-particle:nth-child(3) { top: 80%; left: 40%; animation-delay: -2s; }
+  .automation-particle:nth-child(4) { top: 30%; left: 70%; animation-delay: -1.5s; }
+  .automation-particle:nth-child(5) { top: 70%; left: 30%; animation-delay: -0.5s; }
+  
+  @keyframes rotate3D {
+    from { transform: translate(-50%, -50%) rotateY(0deg) rotateX(0deg); }
+    to { transform: translate(-50%, -50%) rotateY(360deg) rotateX(360deg); }
+  }
+  
+  @keyframes gearRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  @keyframes particleFloat {
+    0% { transform: translate(0, 0); opacity: 0.5; }
+    50% { transform: translate(20px, -20px); opacity: 1; }
+    100% { transform: translate(0, 0); opacity: 0.5; }
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .hero-content {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem;
+    }
+  
+    .hero-text {
+      padding-right: 0;
+      margin-bottom: 2rem;
+    }
+  
+    .animated-text {
+      font-size: 2.5rem;
+    }
+  
+    .animated-text .highlight {
+      font-size: 3rem;
+    }
+  
+    .tech-sphere,
+    .shield-animation,
+    .team-animation,
+    .innovation-animation,
+    .modernization-animation {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .animated-text {
+      font-size: 2rem;
+    }
+  
+    .animated-text .highlight {
+      font-size: 2.5rem;
+    }
+  
+    .subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .description {
+      font-size: 1rem;
+    }
+  
+    .tech-sphere,
+    .shield-animation,
+    .team-animation,
+    .innovation-animation,
+    .modernization-animation {
+      width: 250px;
+      height: 250px;
+    }
+  }

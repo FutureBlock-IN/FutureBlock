@@ -1,0 +1,341 @@
+/* Reset do documento */
+
+/* Var de cores */
+:root {
+  --background: #000000;
+  --backgroundCard: #1a1a1a;
+  --borderCard: #333333;
+  --textColor: #ffffff;
+  --buttonBackground: rgb(205, 92, 92);
+  --buttonTextColor: #000000;
+}
+
+/* container2 */
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animated Background Pattern */
+.box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(45deg, transparent 48%, rgba(255, 0, 0, 0.1) 49%, rgba(255, 0, 0, 0.1) 51%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(255, 0, 0, 0.1) 49%, rgba(255, 0, 0, 0.1) 51%, transparent 52%);
+  background-size: 30px 30px;
+  opacity: 0.3;
+  animation: patternMove 20s linear infinite;
+  z-index: 1;
+}
+
+/* Animated Grid Lines */
+.box::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, rgba(255, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 0, 0, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.2;
+  animation: gridMove 15s linear infinite;
+  z-index: 1;
+}
+
+/* Floating Particles */
+.box .particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.box .particles::before,
+.box .particles::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 0, 0, 0.3);
+  border-radius: 50%;
+  animation: particleFloat 8s infinite;
+}
+
+.box .particles::before {
+  top: 20%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.box .particles::after {
+  top: 60%;
+  left: 80%;
+  animation-delay: -4s;
+}
+
+.box:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.content img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  transition: all 0.5s ease;
+  filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.3));
+}
+
+.box:hover .content img {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.5));
+}
+
+.content p {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin: 0;
+  transition: all 0.3s ease;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.box:hover .content p {
+  transform: translateY(-5px);
+  color: #ff0000;
+}
+
+/* Animation Keyframes */
+@keyframes patternMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 30px 30px;
+  }
+}
+
+@keyframes gridMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 20px 20px;
+  }
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, 10px);
+  }
+  50% {
+    transform: translate(0, 20px);
+  }
+  75% {
+    transform: translate(-10px, 10px);
+  }
+}
+
+/* Shine Effect */
+.box .shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.box:hover .shine {
+  left: 100%;
+}
+
+/* Glow Effect */
+.box .glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 0, 0, 0.1) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 2;
+}
+
+.box:hover .glow {
+  opacity: 1;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.content img {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.box:hover .content img {
+  animation: pulse 1s infinite;
+}
+
+.container2 .card .box h2 {
+  font-size: 2em;
+  margin: 10px 0;
+}
+
+.container2 .card .box .button {
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .container2 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container2 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .container2 .card {
+    min-width: 250px;
+    height: 180px;
+  }
+  
+  .container2 .card .box img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .section-subtit {
+      font-size: 1.2rem;
+      margin-left: -170px;
+  }
+
+  .section-tit {
+      margin-left: -170px;
+  }
+}
+
+.section-subtit {
+  font-size: 0.9325rem;
+  line-height: 1.56;
+  letter-spacing: normal;
+  font-weight: 700;
+  color: #ffffff;
+  position: relative;
+  text-transform: uppercase;
+}
+.section-subtit:before {
+  display: inline-block;
+  content: "";
+  width: 58px;
+  height: 5px;
+  margin-right: 16px;
+  position: relative;
+  top: -4px;
+  background-color: #fe0000;
+}

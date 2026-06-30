@@ -1,0 +1,200 @@
+
+.section-heading h3 {
+    text-align: center;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #121212;
+    }
+    .section-heading .line-dec {
+    width: 60px;
+    height: 3px;
+    background-color: #121212;
+    margin: 0 auto;
+    }
+    
+    .page-section {
+      padding: 80px 0;
+    }
+    
+    @media (max-width: 480px) {
+      .page-section h1 {
+          font-size: 3em;
+      }
+      .page-section h2 {
+          font-size: 2em;
+      }
+      .page-section p {
+          font-size: 1em;
+          margin: 0 0 20px;
+      }
+    }
+    
+    
+    
+    
+    
+    /* WHAT WE DO */
+    
+    #about {
+    background-color: #131313;
+    padding: 80px 0px;
+    }
+    
+    #about .section-heading {
+    margin-bottom: 60px;
+    }
+    
+    .service-item {
+    cursor: pointer;
+    
+    text-align: center;
+    padding: 30px 20px;
+    transition: all 0.7s;
+    box-shadow: 0px 0px 15px #cdcdcd;
+    }
+    
+    .service-item:hover {
+    background-color: #474747;
+    }
+    
+    .service-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    }
+    
+    .service-item:hover h4 {
+    color: #fff;
+    }
+    
+    .service-item:hover p {
+    color: #fff;
+    }
+    
+    .first-service .icon {
+    background-image: url(../img/first-service-main.png);
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    }
+    
+    /* .first-service:hover .icon {
+    background-image: url(../img/first-service-white.png);
+    } */
+    
+    .second-service .icon {
+    background-image: url(../img/second-service-main.png);
+    height: 32px;
+    width: 22px;
+    display: inline-block;
+    }
+    
+    /* .second-service:hover .icon {
+    background-image: url(../img/second-service-white.png);
+    } */
+    
+    .third-service .icon {
+    background-image: url(../img/third-service-main.png);
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    }
+    
+    /* .third-service:hover .icon {
+    background-image: url(../img/third-service-white.png);
+    } */
+    
+    /* .fourth-service .icon {
+    background-image: url(../img/fourth-service-main.png);
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    }
+    
+    .fourth-service:hover .icon {
+    background-image: url(../img/fourth-service-white.png);
+    } */
+    
+    
+    
+    .gap{
+      gap: 40px;
+    }
+    
+    
+    
+    .cards-container {
+      display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    
+    .card-wrapper {
+      display:flex;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 15%;
+        border-radius: 5px;
+      margin:5px auto;
+        -webkit-animation:scaledown 0.3s linear;
+        -moz-animation:scaledown 0.3s linear;
+        animation:scaledown 0.2s linear;
+        transform-origin:50% 50%;
+        animation-fill-mode: forwards;
+      background-color: rgb(255, 255, 255);
+      height: 60px;
+      width:160px;
+    }
+    
+    .card-wrapper:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index:100;
+        -webkit-animation:scale 0.3s linear;
+        -moz-animation:scale 0.3s linear;
+        animation:scale 0.1s linear;
+        transform-origin:50% 50%;
+        animation-fill-mode: forwards;
+    }
+    
+    .card-image img {
+        border-radius: 5px 0 0 5px;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      padding: 4px;
+    }
+    
+    .card-content h3 {
+      justify-content: center;
+      font-size: 1em;
+      
+    }
+    
+    @keyframes scale{
+        0%{
+            transform:scale(1.0);
+      }
+        100%{
+            transform:scale(1.02);
+        }
+    }
+    
+    @keyframes scaledown{
+        0%{
+            transform:scale(1.02);
+        }
+        100%{
+            transform:scale(1.0);
+        }
+    }
+    
+    
+    
+    
+    
+    

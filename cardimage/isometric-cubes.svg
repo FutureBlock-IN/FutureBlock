@@ -1,0 +1,20 @@
+<svg width="208" height="204" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Gray cube 1 -->
+  <path d="M240 80 L320 120 L320 200 L240 160 Z" fill="#e0e0e0" stroke="#333333" stroke-width="3"/>
+  <path d="M320 120 L400 80 L400 160 L320 200 Z" fill="#d0d0d0" stroke="#333333" stroke-width="3"/>
+  <path d="M240 80 L320 40 L400 80 L320 120 Z" fill="#f0f0f0" stroke="#333333" stroke-width="3"/>
+  
+  <!-- Gray cube 2 -->
+  <path d="M160 160 L240 200 L240 280 L160 240 Z" fill="#e0e0e0" stroke="#333333" stroke-width="3"/>
+  <path d="M240 200 L320 160 L320 240 L240 280 Z" fill="#d0d0d0" stroke="#333333" stroke-width="3"/>
+  <path d="M160 160 L240 120 L320 160 L240 200 Z" fill="#f0f0f0" stroke="#333333" stroke-width="3"/>
+  
+  <!-- Red cube -->
+  <path d="M80 160 L160 200 L160 280 L80 240 Z" fill="#ff4444" stroke="#992222" stroke-width="3"/>
+  <path d="M160 200 L240 160 L240 240 L160 280 Z" fill="#dd2222" stroke="#992222" stroke-width="3"/>
+  <path d="M80 160 L160 120 L240 160 L160 200 Z" fill="#ff6666" stroke="#992222" stroke-width="3"/>
+  
+  <!-- Shadow elements -->
+  <path d="M60 170 L80 160 L80 170" fill="#cccccc" opacity="0.2"/>
+  <path d="M250 90 L270 80 L270 90" fill="#cccccc" opacity="0.2"/>
+</svg>

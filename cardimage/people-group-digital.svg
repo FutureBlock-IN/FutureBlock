@@ -1,0 +1,29 @@
+<svg width="208" height="204" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Digital elements in background -->
+  <path d="M50 50 L70 50 L70 70 L50 70 Z" fill="#fff" opacity="0.2"/>
+  <path d="M320 60 L340 60 L340 80 L320 80 Z" fill="#fff" opacity="0.2"/>
+  <path d="M330 90 L350 90 L350 110 L330 110 Z" fill="#fff" opacity="0.2"/>
+  
+  <!-- Group of people -->
+  <!-- Center white person -->
+  <circle cx="200" cy="120" r="35" fill="white" stroke="#fff" stroke-width="3"/>
+  <path d="M160 220 C160 180, 240 180, 240 220" fill="white" stroke="#fff" stroke-width="3"/>
+  
+  <!-- Left red person -->
+  <circle cx="120" cy="160" r="35" fill="#ff4444" stroke="#dd2222" stroke-width="3"/>
+  <path d="M80 260 C80 220, 160 220, 160 260" fill="#ff4444" stroke="#dd2222" stroke-width="3"/>
+  
+  <!-- Right red person -->
+  <circle cx="280" cy="160" r="35" fill="#ff4444" stroke="#dd2222" stroke-width="3"/>
+  <path d="M240 260 C240 220, 320 220, 320 260" fill="#ff4444" stroke="#dd2222" stroke-width="3"/>
+  
+  <!-- Bottom red person -->
+  <circle cx="200" cy="200" r="35" fill="#ff4444" stroke="#dd2222" stroke-width="3"/>
+  <path d="M160 300 C160 260, 240 260, 240 300" fill="#ff4444" stroke="#dd2222" stroke-width="3"/>
+  
+  <!-- Additional digital elements -->
+  <rect x="90" y="80" width="15" height="15" fill="#fff" opacity="0.2"/>
+  <rect x="300" y="100" width="15" height="15" fill="#fff" opacity="0.2"/>
+  <rect x="280" y="70" width="10" height="10" fill="#fff" opacity="0.2"/>
+  <rect x="100" y="100" width="10" height="10" fill="#fff" opacity="0.2"/>
+</svg>

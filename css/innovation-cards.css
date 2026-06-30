@@ -1,0 +1,219 @@
+/* Innovation Cards Section */
+.section-team {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-team::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(205, 92, 92, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.team {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.team:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.team img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team:hover img {
+  transform: scale(1.05);
+}
+
+.entry__body {
+  padding: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.entry__body h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.entry__body h4::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #cd5c5c;
+  transition: width 0.3s ease;
+}
+
+.team:hover .entry__body h4::after {
+  width: 100%;
+}
+
+.service__text {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Contact Section */
+.contact-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  padding: 100px 0;
+  position: relative;
+}
+
+.fv2--cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.fv2--h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.fv2--cta-txt {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+}
+
+.fv2--earth-img {
+  max-width: 100%;
+  height: auto;
+  animation: float 6s ease-in-out infinite;
+}
+
+.w-form {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fv2--txt-input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.fv2--txt-input:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #cd5c5c;
+  outline: none;
+}
+
+.fv2--txt-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.is-text-area {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.fv2--cta-button {
+  width: 100%;
+  padding: 15px;
+  background: #cd5c5c;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.fv2--cta-button:hover {
+  background: #ff6b6b;
+}
+
+.w-form-done, .w-form-fail {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.w-form-done {
+  background: rgba(40, 167, 69, 0.2);
+  border: 1px solid rgba(40, 167, 69, 0.3);
+  color: #fff;
+}
+
+.w-form-fail {
+  background: rgba(220, 53, 69, 0.2);
+  border: 1px solid rgba(220, 53, 69, 0.3);
+  color: #fff;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .fv2--cta-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .fv2--h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-section {
+    padding: 60px 0;
+  }
+  
+  .fv2--h2 {
+    font-size: 28px;
+  }
+  
+  .w-form {
+    padding: 30px;
+  }
+}
