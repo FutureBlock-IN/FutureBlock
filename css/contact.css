@@ -1,0 +1,325 @@
+/* ─── CONTACT SECTION ─── */
+.contact {
+  background: var(--surface-1);
+  padding: 0;
+}
+
+.contact-split {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  gap: 80px;
+  align-items: start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--section-pad) clamp(20px, 5vw, 48px);
+}
+
+.contact-left h2 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.05;
+  margin-bottom: 20px;
+  color: var(--text-1);
+}
+
+.contact-left .contact-intro {
+  font-size: 0.97rem;
+  color: var(--text-2);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.contact-trust {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.contact-trust-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--gold);
+}
+
+.contact-trust span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-1);
+}
+
+.contact-info-block {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.contact-info-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.88rem;
+  color: var(--text-2);
+}
+
+.contact-info-row svg {
+  width: 18px;
+  height: 18px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.contact-info-row a {
+  color: var(--text-2);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-info-row a:hover {
+  color: var(--gold-light);
+}
+
+.contact-form-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at top right, rgba(200, 168, 90, 0.12), transparent 70%);
+  pointer-events: none;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--r-sm);
+  padding: 13px 16px;
+  color: var(--text-1);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+   margin-bottom: 14px;
+  caret-color: var(--gold);
+  transition: all 0.25s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-3);
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23A0A0A0' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.form-group select option {
+  background: var(--surface-2);
+  color: var(--text-1);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: rgba(200, 168, 90, 0.04);
+  box-shadow: 0 0 0 3px rgba(200, 168, 90, 0.1);
+}
+
+.form-group textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.form-group input.error,
+.form-group textarea.error,
+.form-group select.error {
+  border-color: #FF4444 !important;
+  box-shadow: 0 0 0 3px rgba(255, 68, 68, 0.1) !important;
+}
+
+.form-submit {
+  width: 100%;
+  margin-top: 8px;
+  background: var(--gold);
+  color: var(--black);
+  border: none;
+  border-radius: var(--r-sm);
+  padding: 15px 24px;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--ease-spring);
+}
+
+.form-submit:hover:not(:disabled) {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(200, 168, 90, 0.3);
+}
+
+.form-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-success-panel {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  min-height: 320px;
+}
+
+.form-success-panel.is-visible {
+  display: flex;
+}
+
+.form-success-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gold-subtle);
+  border: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.form-success-circle svg {
+  width: 24px;
+  height: 24px;
+  color: var(--gold);
+}
+
+.form-success-panel h3 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.form-success-panel p {
+  font-size: 0.9rem;
+  color: var(--text-2);
+}
+
+@media (max-width: 768px) {
+  .contact-split {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact-form-card {
+    padding: 28px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── THANK YOU / 404 ─── */
+.page-centered {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px 80px;
+  text-align: center;
+}
+
+.page-centered .error-code {
+  font-family: 'Syne', sans-serif;
+  font-weight: 900;
+  font-size: clamp(5rem, 15vw, 8rem);
+  color: var(--gold-light);
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.page-centered h1 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.page-centered p {
+  color: var(--text-2);
+  margin-bottom: 32px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-centered .back-link {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.page-centered .back-link:hover {
+  color: var(--gold-light);
+}
+
+.page-centered .success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--gold-subtle);
+  border: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.page-centered .success-icon svg {
+  width: 32px;
+  height: 32px;
+  color: var(--gold);
+}
