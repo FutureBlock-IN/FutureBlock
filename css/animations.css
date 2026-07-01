@@ -1,29 +1,29 @@
-[data-animate] {
+html.js [data-animate] {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
     transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-[data-animate="fade-left"] {
+html.js [data-animate="fade-left"] {
   transform: translateX(-28px);
 }
 
-[data-animate="fade-right"] {
+html.js [data-animate="fade-right"] {
   transform: translateX(28px);
 }
 
-[data-animate="scale"] {
+html.js [data-animate="scale"] {
   transform: scale(0.94);
 }
 
-[data-animate].in-view {
+html.js [data-animate].in-view {
   opacity: 1;
   transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-animate] {
+  html.js [data-animate] {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;

@@ -3,6 +3,7 @@ function initMarquee() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  document.documentElement.classList.add('js');
   if (typeof initTechStagger === 'function') initTechStagger();
   if (typeof initTechAccordion === 'function') initTechAccordion();
   initParticles('hero-canvas');

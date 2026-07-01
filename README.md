@@ -8,6 +8,28 @@ Enterprise IT consultancy website — Advisory, Automation, Integrations, Busine
 npx serve .
 ```
 
+## Production build
+
+After editing source files in `css/` or `js/`, regenerate minified assets:
+
+```bash
+npm install
+npm run build
+```
+
+Or on Git Bash / macOS / Linux:
+
+```bash
+chmod +x build.sh
+./build.sh
+```
+
+This minifies CSS/JS and updates `*.min.css` / `*.min.js`. HTML files reference the minified assets.
+
+**Important:** Do not run `javascript-obfuscator` with `--rename-globals` on split script files — it breaks cross-file calls like `initScrollAnimations()`. Do not run `html-minifier-terser` with `--remove-optional-tags` — it strips closing tags and breaks the DOM.
+
+Then commit and push to deploy via GitHub Pages.
+
 ## Formspree setup (contact form)
 
 1. Sign up at [formspree.io](https://formspree.io)
