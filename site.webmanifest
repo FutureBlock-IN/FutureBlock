@@ -1,6 +1,9 @@
 {
   "name": "FutureBlock",
   "short_name": "FutureBlock",
+  "description": "FutureBlock designs, builds, and scales modern software, cloud platforms, and AI-powered solutions.",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "img/favicon.png",
